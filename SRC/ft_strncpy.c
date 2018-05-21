@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 12:39:12 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/21 15:00:39 by hrossouw         ###   ########.fr       */
+/*   Created: 2018/05/21 15:01:04 by hrossouw          #+#    #+#             */
+/*   Updated: 2018/05/21 15:40:56 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h> //test
 
-char	*ft_strcpy(char *s1, char *s2)
+char	*ft_strncpy(char *dst, char *src, int len)
 {
 	int i;
 
 	i = 0;
-	while (s2[i] != '\0')
+	len = 2;
+	while (src[i] != '\0' && i < len)
 	{
-		s1[i] = s2[i];
+		dst[i] = src[i];
 		i++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	dst[i] = '\0';
+	return (dst);
 }
 
 int		main(int argc, char **argv) //test
 {
-	if (argc == 3)
+	if (argc == 4)
 	{
 		printf("1: %s\n", argv[1]);
 		printf("2: %s\n", argv[2]);
-		printf("Result = %s", ft_strcpy(argv[1], argv[2])); 
+		printf("Result = %s", ft_strncpy(argv[1], argv[2], argv[3])); 
 	}
 	return (0);
 }
