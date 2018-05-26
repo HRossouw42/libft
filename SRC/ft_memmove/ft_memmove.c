@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/26 08:45:58 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/26 11:49:31 by hrossouw         ###   ########.fr       */
+/*   Created: 2018/05/26 11:23:17 by hrossouw          #+#    #+#             */
+/*   Updated: 2018/05/26 13:13:04 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Create buffers for the memory, assign them values of input pointers
-*/
-
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*buffer;
 	const unsigned char	*source;
@@ -24,11 +20,16 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	buffer = dst;
 	source = src;
-	i = 0;
-	while (i < n)
+	i = (n - 1);
+	if (dst > src)
+		return (ft_memcpy(dst, src, len));
+	if (dst == src || len == NULL)
+		return (dst);
+	while (i > 0)
 	{
 		buffer[i] = source[i];
-		i++;
+		i--;
 	}
+	buffer[0] = source[0];
 	return (dst);
 }

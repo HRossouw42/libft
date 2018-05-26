@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/26 08:45:58 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/26 11:49:31 by hrossouw         ###   ########.fr       */
+/*   Created: 2018/05/26 09:49:04 by hrossouw          #+#    #+#             */
+/*   Updated: 2018/05/26 11:08:50 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Create buffers for the memory, assign them values of input pointers
+** Create buffers for the memory, assign them values of input pointers,
+** return pointer to byte after c
 */
 
-#include "libft.h"
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char		*buffer;
 	const unsigned char	*source;
@@ -28,7 +27,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	while (i < n)
 	{
 		buffer[i] = source[i];
+		if (source[i] == (unsigned char)c)
+			return ((void *)buffer + i + 1);
 		i++;
 	}
-	return (dst);
+	return (NULL);
 }
