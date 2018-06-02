@@ -6,22 +6,16 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 11:34:24 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/23 11:54:02 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:39:11 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //test
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'z')
 		return (c);
-	else 
+	else
 		return (0);
-}
-
-int	main(void) //test
-{
-	printf("%d", ft_isalpha(1231421551));
-	return (0);
 }

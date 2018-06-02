@@ -6,14 +6,11 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 09:49:04 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/26 11:08:50 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 15:36:15 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Create buffers for the memory, assign them values of input pointers,
-** return pointer to byte after c
-*/
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

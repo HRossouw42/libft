@@ -6,12 +6,11 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 15:39:14 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/22 15:53:08 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:15:18 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //test
-#include <string.h> //test
+#include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t count)
 {
@@ -30,15 +29,4 @@ char	*ft_strncat(char *dest, const char *src, size_t count)
 	}
 	dest[dest_size] = '\0';
 	return (dest);
-}
-
-int		main(void) //test
-{
-	char str[50] = "Hello";
-	char str2[50] = "World!";
-
-	ft_strncat(str, str2, 6);
-	ft_strncat(str, " ...", 4);
-	ft_strncat(str, "  Goodbye World!", 4);
-	puts(str);
 }

@@ -6,11 +6,13 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 14:01:16 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/23 14:05:15 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:35:42 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	if (c >= '0' && c <= 'z')
 		return (c);

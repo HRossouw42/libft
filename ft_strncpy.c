@@ -6,30 +6,26 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 15:01:04 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/22 12:12:12 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:01:08 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //test
+#include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, unsigned int len)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (src[i] != '\0' && i < len)
+	while (src[i] != '\0' && i < n)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
 	return (dst);
-}
-
-int		main(int argc, char **argv) //test
-{
-		printf("1: %s\n", argv[1]);
-		printf("2: %s\n", argv[2]);
-		printf("Result = %s", ft_strncpy(argv[1], argv[2], 2)); 
-	return (0);
 }

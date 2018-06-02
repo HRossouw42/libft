@@ -6,13 +6,9 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 08:45:58 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/26 11:49:31 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 15:34:43 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Create buffers for the memory, assign them values of input pointers
-*/
 
 #include "libft.h"
 

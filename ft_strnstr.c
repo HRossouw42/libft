@@ -6,11 +6,11 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 16:58:27 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/24 16:58:30 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/02 16:26:44 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> //test
+#include "libft.h"
 
 char	*ft_strnstr(char *str, char *to_find, size_t until_len)
 {
@@ -36,13 +36,5 @@ char	*ft_strnstr(char *str, char *to_find, size_t until_len)
 		j = 0;
 		i++;
 	}
-	return (0);
-}
-
-int	main(void) //test
-{
-	char s1[] = "HELLO DOLLY";
-	char s2[] = "LLO";
-	printf("%s", ft_strnstr(s1, s2, 2));
 	return (0);
 }
