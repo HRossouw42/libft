@@ -6,7 +6,7 @@
 #    By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/29 11:05:19 by hrossouw          #+#    #+#              #
-#    Updated: 2018/06/04 17:30:07 by hrossouw         ###   ########.fr        #
+#    Updated: 2018/06/04 18:07:32 by hrossouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRC =	ft_atoi.c \
 		ft_bzero.c \
-		ft_mem{alloc,ccpy,rchr,chr,cmp,cpy,del,move,set}.c \
+		ft_mem{alloc,ccpy,chr,cmp,cpy,del,move,set}.c \
 		ft_strcat.c \
 		ft_strchr.c \
 		ft_strclr.c \
@@ -46,13 +46,6 @@ SRC =	ft_atoi.c \
 		ft_itoa.c \
 		ft_put{char,str,endl,nbr}.c \
 		ft_put{char,str,endl,nbr}_fd.c \
-		ft_lst{map,new,delone,del,add,iter}.c \
-		ft_listlen.c \
-		ft_min.c \
-		ft_max.c \
-		ft_num_places.c \
-		ft_memrcpy.c \
-		ft_count_delim.c \
 		ft_amount_of_num.c \
 		ft_amount_of_words.c \
 
