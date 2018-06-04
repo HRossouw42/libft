@@ -6,7 +6,7 @@
 #    By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/29 11:05:19 by hrossouw          #+#    #+#              #
-#    Updated: 2018/06/04 15:40:30 by hrossouw         ###   ########.fr        #
+#    Updated: 2018/06/04 17:30:07 by hrossouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRC =	ft_atoi.c \
 		ft_memrcpy.c \
 		ft_count_delim.c \
 		ft_amount_of_num.c \
+		ft_amount_of_words.c \
 
 OBJ = $(SRC:.c=.o)
 
