@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 15:27:35 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/31 15:36:18 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/04 12:32:25 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_strclr(char *s)
 {
 	if (s)
-		ft_bzero(s, (sizeof(char) * ft_strlen(s));
+		ft_bzero(s, (sizeof(char) * ft_strlen(s)));
 }
