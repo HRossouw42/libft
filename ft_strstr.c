@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 16:34:10 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 12:12:08 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:31:54 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ char	*ft_strstr(const char *big, const char *little)
 	while (little[len] != '\0')
 		len++;
 	if (len == 0)
-		return (big);
+		return ((char *)(big));
 	while (big[i] != '\0')
 	{
 		while (big[i + j] == little[j])
 		{
 			if (j == len - 1)
-				return (big + i);
+				return ((char *)(big + i));
 			j++;
 		}
 		j = 0;

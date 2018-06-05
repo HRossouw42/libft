@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/02 13:14:05 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/02 13:52:38 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:42:32 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ char	*ft_strtrim(char const *s)
 	len = ft_strlen(s) - 1;
 	while (len > i && (s[len] == ' ' || s[len] == '\n' || s[len] == '\t'))
 		len--;
-	// error check if len < i!
 	return (new_str = ft_strsub(s, i, len - (size_t)i + 1));
 }

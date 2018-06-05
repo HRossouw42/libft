@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 11:36:29 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 12:14:08 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:38:57 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	ft_putnbr(int n)
 {
 	if (n > 2147483647 || n < -2147483648)
-		return (NULL);
+		return ;
 	if (n == -2147483648)
 	{
 		ft_putstr("-2147483648");
-		return (NULL);
+		return ;
 	}
 	if (n < 0)
 	{
@@ -29,9 +29,9 @@ void	ft_putnbr(int n)
 	if (n < 10)
 	{
 		ft_putchar(n + '0');
-		return (NULL);
+		return ;
 	}
 	ft_putnbr(n / 10);
 	ft_putchar((n % 10) + '0');
-	return (NULL);
+	return ;
 }

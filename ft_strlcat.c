@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 12:21:16 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 11:46:21 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:28:45 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[dst_size - 1] = '\0';
-	return (dest_size);
+	return (dst_size);
 }

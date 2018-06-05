@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 15:11:30 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 10:55:03 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:18:10 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char		*ft_strchr(const char *s, int c)
 	while (i < len)
 	{
 		if ((char)c == s[i])
-			return ((const char*)&s[i]);
+			return ((char*)&s[i]);
 		i++;
 	}
 	return (0);
