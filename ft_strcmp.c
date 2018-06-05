@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 16:07:17 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 12:40:44 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 17:52:11 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-		i++;
-	return (s1[i] - s2[i]);
+	return (ft_memcmp(s1, s2, ft_strlen(s2) + 1));
 }

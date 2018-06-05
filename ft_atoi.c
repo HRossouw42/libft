@@ -6,31 +6,34 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 15:43:36 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/02 16:38:47 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 18:41:26 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
-	int i;
-	int negative;
-	int number;
+	int		i;
+	int		negative;
+	int		output;
+	char	*input;
 
 	i = 0;
-	negative = 0;
-	number = 0;
-	while (str[i] != '\0' || str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+	negative = 1;
+	output = 0;
+	input = (char *)s;
+	while (*input == ' ' || *input == '\n' || *input == '\t')
+		input++;
+	if (*input == '-' && ft_isdigit(*(input + 1)))
 	{
-		if (str[i] == '-')
-			negative = 1;
-		else if (str[i] >= '0' && str[i] <= '9')
-			number = (number * 10) + (str[i] - '0');
-		i++;
+		negative = -1;
+		input++;
 	}
-	if (negative == 1)
-		return (-number);
-	else
-		return (number);
+	if (*input == '+' && ft_isdigit(*(input + 1)))
+	{
+		output = output * 10 + (*input - '0');
+		input++;
+	}
+	return (output * negative);
 }
