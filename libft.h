@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 10:08:21 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/04 17:30:39 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 14:07:16 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,6 @@ void				*ft_memrcpy(void *dst, const void *src, size_t n);
 size_t				ft_iterative_power(size_t base, size_t exponent);
 int					ft_amount_of_num(int num);
 int					ft_amount_of_words(char const *s, char c);
+size_t				ft_min(size_t a, size_t b);
 
 #endif
