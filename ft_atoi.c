@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 15:43:36 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 18:41:26 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 19:28:10 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int	ft_atoi(const char *s)
 	negative = 1;
 	output = 0;
 	input = (char *)s;
-	while (*input == ' ' || *input == '\n' || *input == '\t')
+	while (*input == ' ' || *input == '\n' || *input == '\t'
+			|| *input == '\f' || *input == '\r' || *input == '\v')
 		input++;
 	if (*input == '-' && ft_isdigit(*(input + 1)))
 	{
@@ -31,6 +32,8 @@ int	ft_atoi(const char *s)
 		input++;
 	}
 	if (*input == '+' && ft_isdigit(*(input + 1)))
+		input++;
+	while (ft_isdigit(*input))
 	{
 		output = output * 10 + (*input - '0');
 		input++;
