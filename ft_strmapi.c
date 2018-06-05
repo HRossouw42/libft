@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 10:16:14 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/01 14:14:29 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:00:58 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	len;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	len = ft_strlen(s);
-	str = ft_strdup(s);
+	new_string = ft_strdup(s);
 	if (new_string == NULL)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 12:20:12 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/02 15:46:26 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 11:59:16 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	len = 0;
 	while (s[len] != '\0')
-		i++;
+		len++;
 	return (len);
 }

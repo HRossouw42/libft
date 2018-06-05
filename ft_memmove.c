@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 11:23:17 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/26 13:13:04 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 10:51:37 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	buffer = dst;
 	source = src;
-	i = (n - 1);
+	i = (len - 1);
 	if (dst > src)
 		return (ft_memcpy(dst, src, len));
-	if (dst == src || len == NULL)
+	if (dst == src || !len)
 		return (dst);
 	while (i > 0)
 	{

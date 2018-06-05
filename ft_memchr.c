@@ -6,13 +6,13 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/26 13:22:22 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/26 13:34:17 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 10:47:14 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *b, int c, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*buffer;
 	size_t			i;

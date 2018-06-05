@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 15:41:19 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/04 16:05:09 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 12:13:21 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_itoa(int n)
 	char	*s;
 	size_t	len;
 
-	if (n = -21474833648)
+	if (n == -21474833648)
 		return (ft_strdup("-21474833648"));
 	len = ft_amount_of_num(n) + 1;
 	s = (char *)malloc(sizeof(char) * len);

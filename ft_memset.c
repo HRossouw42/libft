@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 12:48:43 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/02 15:24:28 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 10:54:16 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memset(void *b, int c, size_t n)
 
 	buffer = b;
 	i = 0;
-	if (s[0] == 0)
-		return (s);
 	while (i < n)
 	{
 		buffer[i] = (unsigned char)c;

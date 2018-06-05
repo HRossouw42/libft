@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/31 17:56:11 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/05/31 18:06:48 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 11:08:01 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int i;
 
-	if (!s || !f)
-		return (0);
 	if (s && f)
 	{
 		i = 0;
