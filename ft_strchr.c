@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 15:11:30 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 12:18:10 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/05 14:30:43 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,8 @@
 
 char		*ft_strchr(const char *s, int c)
 {
-	int i;
-	int len;
+	size_t	location_c;
 
-	i = 0;
-	len = ft_strlen(s);
-	if (s == 0)
-		return (0);
-	if ((c > 255) || (c < 0))
-	{
-		return (0);
-	}
-	while (i < len)
-	{
-		if ((char)c == s[i])
-			return ((char*)&s[i]);
-		i++;
-	}
-	return (0);
+	location_c = ft_strlen(s) + 1;
+	return ((char *)ft_memchr(s, c, location_c));
 }

@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_min.c                                           :+:      :+:    :+:   */
+/*   ft_memrchrn.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 14:04:46 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 14:43:10 by hrossouw         ###   ########.fr       */
+/*   Created: 2018/06/05 14:57:35 by hrossouw          #+#    #+#             */
+/*   Updated: 2018/06/05 15:04:00 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_min(size_t a, size_t b)
+void	*ft_memrchrn(const void *s, int c, size_t n)
 {
-	if (a < b)
-		return (a);
-	return (b);
+	unsigned char	*buffer;
+	size_t			i;
+
+	buffer = (unsigned char *)s;
+	i = (n - 1);
+	while (i > 0)
+	{
+		if (buffer[i] == (unsigned char)c)
+			return (buffer + i);
+		i--;
+	}
+	if (buffer[0] == (unsigned char)c)
+		return ((void *)buffer);
+	return (NULL);
 }
