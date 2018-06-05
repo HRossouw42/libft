@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_memrchrn.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/04 15:41:19 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/05 15:31:29 by hrossouw         ###   ########.fr       */
+/*   Created: 2018/06/05 14:57:35 by hrossouw          #+#    #+#             */
+/*   Updated: 2018/06/05 15:04:00 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+void	*ft_memrchrn(const void *s, int c, size_t n)
 {
-	char	*s;
-	size_t	len;
+	unsigned char	*buffer;
+	size_t			i;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	len = ft_amount_of_num(n) + 1;
-	s = (char *)malloc(sizeof(char) * len);
-	if (!s)
-		return (NULL);
-	if (n == 0)
-		s[0] = '0';
-	if (n < 0)
+	buffer = (unsigned char *)s;
+	i = (n - 1);
+	while (i > 0)
 	{
-		s[0] = '-';
-		n = -n;
+		if (buffer[i] == (unsigned char)c)
+			return (buffer + i);
+		i--;
 	}
-	s[len - 1] = '\0';
-	while (n)
-	{
-		len--;
-		s[len - 1] = (n % 10) + '0';
-		n = n / 10;
-	}
-	return (s);
+	if (buffer[0] == (unsigned char)c)
+		return ((void *)buffer);
+	return (NULL);
 }
