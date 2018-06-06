@@ -6,7 +6,7 @@
 #    By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/29 11:05:19 by hrossouw          #+#    #+#              #
-#    Updated: 2018/06/06 14:41:59 by hrossouw         ###   ########.fr        #
+#    Updated: 2018/06/06 19:58:46 by hrossouw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ clean:
 	@echo "Object files cleaned!"
 
 fclean: clean
-	@/bin/rm $(NAME)
+	@/bin/rm -f $(NAME)
 	@echo "All compiled files cleaned!"
 
 re: fclean all
