@@ -6,7 +6,7 @@
 /*   By: hrossouw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/01 14:10:20 by hrossouw          #+#    #+#             */
-/*   Updated: 2018/06/01 14:32:04 by hrossouw         ###   ########.fr       */
+/*   Updated: 2018/06/06 11:32:37 by hrossouw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)
 		return (0);
-	if (ft_strcmp(s1, s2) != 0)
-		return (1);
-	else
+	if (ft_strlen(s1) != ft_strlen(s2))
 		return (0);
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (1);
 }
